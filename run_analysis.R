@@ -31,18 +31,18 @@ ReadData<- function() { #Read the data into R
 
 
 
-ProcessData <- function() { # Process the Data According to the Instructions of the Assignment
-        # combine test and train datasets
+ProcessData <- function() { # Process the Data According to the Instructions of the Assignment and return a tidy dataset
+        # combine the test and train datasets
         Xdata<-rbind(Xtrain,Xtest) 
         Ydata<-rbind(Ytrain,Ytest)
         SubData<-rbind(train_sub,test_sub)
-        # rename the subject and activity columns 
+        # rename the 'subject' and 'activity' columns 
         names(SubData)="Subject"
         names(Ydata)="Activity"
-        # set Subject and Activity as factors and change the activity labels to discriptive labels
+        # set 'subject' and 'activity' as factors and change the activity labels to discriptive labels
         SubData$Subject<-factor(SubData$Subject)
         Ydata$Activity=factor(Ydata$Activity,labels=c(as.character(Ylabels$V2)))
-        # extract only the mean and std of each measurement and combine with the Activity and Subject labels
+        # extract only the mean and std of each measurement and combine with the 'activity' and 'subject' labels
         keep1<-grepl("-mean()", cnames$V2,fixed=T)
         keep2<-grepl("-std()", cnames$V2,fixed=T)
         extractedData<-Xdata[,keep1 | keep2]
