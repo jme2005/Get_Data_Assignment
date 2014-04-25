@@ -20,29 +20,29 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The variables in the tidy dataset are:
 
-Subject
-Activity
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+Subject  
+Activity  
+tBodyAcc-XYZ  
+tGravityAcc-XYZ  
+tBodyAccJerk-XYZ  
+tBodyGyro-XYZ  
+tBodyGyroJerk-XYZ  
+tBodyAccMag  
+tGravityAccMag  
+tBodyAccJerkMag  
+tBodyGyroMag  
+tBodyGyroJerkMag  
+fBodyAcc-XYZ  
+fBodyAccJerk-XYZ  
+fBodyGyro-XYZ  
+fBodyAccMag  
+fBodyAccJerkMag  
+fBodyGyroMag  
+fBodyGyroJerkMag  
 
 where the average mean (denoted: -mean()) and average standard deviation (denoted: -std()) for each subject,activity, and measurement are presented as indicated.
 
-The tidy dataset was obtained by running the script "data_analysis.R". This script requires that the dataset found on:
+The tidy dataset was obtained by running the script "run_analysis.R". This script requires that the dataset found on:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
@@ -54,8 +54,8 @@ are in your working directory.
 
 The script will:
 
-	1. Read the Data into the global environment (Read_Data())
-	2. Combine the test and training set
+	1. Read the data into the global environment.
+	2. Combine the test and training dataset
 	3. Rename the variables according to the features.txt file.
 	4. Extract the measurements of mean and standard deviation for each measurement
 	5. Add the subject and activity info to the measurements
