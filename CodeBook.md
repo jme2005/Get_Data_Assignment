@@ -44,22 +44,24 @@ where the average mean (denoted: -mean()) and average standard deviation (denote
 
 The tidy dataset was obtained by running the script "run_analysis.R". This script requires that the dataset found on:
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+http://archive.ics.uci.edu/ml/machine-learning-databases/00240/
+ 
 
-is in your working directory either by having the "UCI HAR Dataset" directory and it's subdirectories located in your working directory or that all these files:
+is in your working directory either by having the "UCI HAR Dataset" directory and it's subdirectories unzipped or located in your working directory or that all these files:
 
 X_train.txt, features.txt, y_train.txt, activity_labels.txt, X_test.txt, y_test.txt, subject_test.txt, subject_train.txt
 
 are in your working directory.
 
-The script will:
+The script contain 2 functions that will:
 
-	1. Read the data into the global environment.
-	2. Combine the test and training dataset
-	3. Rename the variables according to the features.txt file.
-	4. Extract the measurements of mean and standard deviation for each measurement
-	5. Add the subject and activity info to the measurements
-	6. Create a tidy data set, containing the average mean and std for each activity and subject
-	7. Return this data set in the data frame "tidyData"
+	1. Read the data into the global environment. - "ReadData"
+	2. Combine the test and training dataset. - "ProcessData"
+	3. Rename the variables according to the features.txt file. - "ProcessData"
+	4. Extract the measurements of mean and standard deviation for each measurement. - "ProcessData"
+	5. Add the subject and activity info to the measurements. - "ProcessData"
+	6. Create a tidy data set, containing the average mean and std for each activity and subject. - "ProcessData"
+	7. Return this data set in the data frame "tidyData".  - "ProcessData"
+	8. If you desire to remove the rawdata files you can also run the "DeleteRawData" function remove the "#" from the last line in the script.
 
 Also find this tidy Data set in this repo as "tidyData.csv"

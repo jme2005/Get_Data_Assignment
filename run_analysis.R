@@ -57,8 +57,13 @@ ProcessData <- function() { # Process the Data According to the Instructions of 
         tidyData
 }
 
+
+
+
 ReadData()
 tidyData<-ProcessData()
+#rm("Xtrain","Ytrain","cnames","Xtest","Ytest","Ylabels","test_sub","train_sub")
+
 
 
 
