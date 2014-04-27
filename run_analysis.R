@@ -49,9 +49,9 @@ ProcessData <- function() { # Process the Data According to the Instructions of 
         names(extractedData)=cnames$V2[keep1 | keep2]
         comb_data<-cbind(SubData,extractedData,Ydata)
         # create a tidy dataset with the average of the mean and std for each activity and subject
-        drops<-c('Subject','Activity')
+        drops<-c('Subject','Activity') # since the means will be aggreagated by these factors they will be excluded
         tidyData<-aggregate(comb_data[,!(names(comb_data) %in% drops)],by=list(comb_data$Subject,comb_data$Activity),FUN=mean)
-        names(tidyData)[1]=drops[1]
+        names(tidyData)[1]=drops[1] #rename the "Group.1" and " Group.2" columns to their proper names. 
         names(tidyData)[2]=drops[2]
         # return the tidy dataset
         tidyData
